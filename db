@@ -1,0 +1,66 @@
+db
+	User
+		ID <int>
+		Name <string>
+		Avatar <string>
+		Age <int>
+		Location <string>
+		Biography <string>
+		Website <string>
+		Hash <string>
+	Favourite
+		UserID <int>
+		SaveID <int>
+	Saves
+		ID <int>
+		DateCreated <int>
+		Date <int>
+		Version <int>
+		Score <int>
+		ScoreUp <int>
+		ScoreDown <int>
+		Views <int>
+		Name <string>
+		ShortName <string>
+		Username <string>
+		Published <bool>
+	Comments
+		SaveID <int>
+		CommentID <int>
+		Username <string>
+		UserID <int>
+		Gravatar <string>
+		Text <string>
+		Timestamp <int>
+		FormattedUsername <string>
+	Version
+		Stable
+			Major <string>
+			Minor <string>
+			Build <string>
+			File <string>
+		Beta
+			Major <string>
+			Minor <string>
+			Build <string>
+			File <string>
+		Snapshot
+			Major <string>
+			Minor <string>
+			Build <string>
+			Snapshot <string>
+			File <string>
+	Info
+		LastUserID <int>
+		LastSaveID <int>
+	Motd
+		Index number <int>
+		Message <string>
+	Votes
+		SaveID <int>
+		UserID <int>
+		Vote <int>
+	Tags
+		SaveID <int>
+		UserID <int>
+		Tag <string>

@@ -1,0 +1,84 @@
+iam's open source tpt server
+
+ 
+
+If used in another project please give me credit
+
+ 
+
+An example server is being run at iam.starcatcher.us:3100. Register at http://iam.starcatcher.us:3100/register
+
+
+Connect with these clients:
+
+Windows:
+   http://starcatcher.us/TPT/iam/iam%20server.zip
+Linux:
+
+   http://starcatcher.us/TPT/iam/iam%20server%20linux64.zip
+Mac:
+
+   http://starcatcher.us/TPT/iam/iam%20server%20mac.zip
+
+
+Source can be found here
+    http://iam.starcatcher.us/iam/TPTServer/src/master
+
+ 
+Setup
+
+    1. Install mongodb
+    2. Install node.js
+    3. Install needed node.js libraries (using npm is the easiest way)
+    4. Run install.js (node install.js)
+    5. Run main.js (node main.js)
+
+ 
+How to use
+
+    When running properly, a register page can be found at http://<yourWebsite>:<port>/register
+    Creating a client and connecting are explained later
+
+ 
+Changing Server port
+
+    At the bottom of main.js you can change the line
+        http.listen(3000, function(){
+    to change the port the server runs on
+
+ 
+Searching
+
+    Features
+        sorting (sort:<field>)
+        history search (history:<id>)
+        user search (user:<username>)
+        search search ()
+    
+    search fields: ['ID', 'DateCreated', 'Date', 'Version', 'Score', 'ScoreUp', 'ScoreDown', 'Views', 'Name', 'ShortName', 'Username', 'Published']
+    
+    example usage:
+        sort:id
+        
+    A '!' can be put after sort: to reverse the order of the saves
+    ex.
+        sort:!id
+
+ 
+Creating Client
+
+    To make a client for you server you must compile the tpt source which can be downloaded here https://github.com/simtr/The-Powder-Toy
+    
+    modify lines
+        #define SERVER
+    and
+        #define STATICSERVER
+    in
+        /src/Config.h
+    to have your server address, then compile the source using the instructions here http://powdertoy.co.uk/Wiki/W/Main_Page.html#How_to_Build
+
+
+I can be found in #powder (iam or iamaway). Feel free to ask about the server code, how to set it up, or anything else you want to know.
+If you find a bug please tell me!
+
+Thank you jacob1 and lockeedmartin for being helpful and supportive
