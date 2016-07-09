@@ -432,6 +432,6 @@ app.use(function (req, res) {
 });
 
 http.listen(3000, function(){
-	console.log('listening on *:3000');
+	console.log('listening on 97.124.174.156:3000');
 	process.chdir(__dirname + "/render");
 });
